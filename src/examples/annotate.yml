@@ -1,0 +1,19 @@
+description: >
+  Example annotating a new deployment
+# Provide a use-case based example for using this orb.
+# Everything in the `usage` section will be displayed in the orb registry.
+# Comments are not retained.
+usage:
+  version: 2.1
+  orbs:
+    grafana-annotate: pantheon-systems/grafana-annotator@1.2.3
+  workflows:
+    use-my-orb:
+      jobs:
+        - grafana-annotate/annotate:
+            data: "Build Number: $CIRCLE_BUILD_NUM"
+            grafana_cert: $GRAFANA_CERT_FROM_ENV_VARIABLES
+            grafana_url: "https://my-grafana.example.com"
+            tags: "deployment, deployment-<service>, <service>, <region>"
+            what: "Deployment of <service> to <region>"
+            when: "1603846674"
