@@ -1,0 +1,35 @@
+description: >
+  This command POSTs a new graphite annotation to grafana
+parameters:
+  data:
+    type: string
+    default: ""
+    description: "Optional. Grafana `data` field."
+  grafana_cert:
+    type: string
+    description: "Required. Certificate to authenticate against Grafana api."
+  grafana_url:
+    type: string
+    description: "Required. Granana hostname to which to post annotations."
+  tags:
+    type: string
+    description: "Required. Grafana `tags` field. Comma separated list."
+  what:
+    type: string
+    description: "Required. What the annotation is."
+  when:
+    type: string
+    default: ""
+    description: "Optional. Grafana `when` field. Epoch format."
+
+steps:
+  - run:
+      environment:
+        PARAM_DATA: <<parameters.data>>
+        PARAM_GRAFANA_CERT: <<parameters.grafana_cert>>
+        PARAM_GRAFANA_URL: <<parameters.grafana_url>>
+        PARAM_TAGS: <<parameters.tags>>
+        PARAM_WHAT: <<parameters.what>>
+        PARAM_WHEN: <<parameters.when>>
+      name: Granana Annotate
+      command: <<include(scripts/create.sh)>>
