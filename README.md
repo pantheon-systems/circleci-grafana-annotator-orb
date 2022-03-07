@@ -1,6 +1,8 @@
 # Orb Project Template
 
 [![CircleCI Build Status](https://circleci.com/gh/pantheon-systems/circleci-grafana-annotator-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/pantheon-systems/circleci-grafana-annotator-orb) [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/pantheon-systems/circleci-grafana-annotator-orb)](https://circleci.com/orbs/registry/orb/pantheon-systems/circleci-grafana-annotator-orb) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/pantheon-systems/circleci-grafana-annotator-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
+[![Unofficial](https://img.shields.io/badge/Pantheon-Unofficial-yellow?logo=pantheon&color=FFDC28)](https://pantheon.io/docs/oss-support-levels#unofficial)
+
 
 
 
